@@ -4,7 +4,7 @@ import Recipecard from './Recipecard';
 
 const Recipe = () => {
         const chefs = useLoaderData();
-        const {name, id} = chefs;
+        const {name,bio, experience, likes, number_of_recipes, photo, id} = chefs;
          const [recipe, setRecipe] = useState([]);
          
        useEffect( () => {
@@ -19,12 +19,19 @@ const Recipe = () => {
 
        }, [])
 
-       console.log(recipe)
+       
         return (
                 <div>
                       <div>
-                        <div><h1>{name}</h1></div>
-                        <div><h1>image</h1></div>
+                        <div className='mt-5 w-80 mx-auto'>
+    <img  className=" h-72 w-full rounded-lg" src= {photo} />
+                        <div><h1 className='text-2xl'> Name : {name}</h1></div>
+                        <p> Some Bio : {bio}</p>
+                        <p> Like : {likes}</p>
+                        <p> Recipe quantity : {number_of_recipes}</p>
+                        <p> Experience : {experience}</p>
+                         
+  </div>
 
                 </div>
                 <div>
@@ -34,7 +41,8 @@ const Recipe = () => {
                         recipe = {r}
                         
                         ></Recipecard>)
-                }     <Link to = "/">back</Link>     
+                }    
+                 <Link to = "/">back</Link>     
                  </div> 
                 </div>
         );

@@ -3,8 +3,8 @@ import React from 'react';
 
 const Benner = () => {
         return (
-                <div>
-                      <div  className="hero min-h-screen" style={{ backgroundImage: `url("/public/images/burger1.jpg")` }}>
+               
+                      <div  className="hero h-96 mt-8 container mx-auto" style={{ backgroundImage: `url("/public/images/burger1.jpg")` }}>
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-start text-neutral-content">
     <div className="max-w-md">
@@ -14,7 +14,7 @@ const Benner = () => {
     </div>
   </div>
 </div>
-                </div>
+              
         );
 };
 
