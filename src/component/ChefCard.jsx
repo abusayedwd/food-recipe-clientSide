@@ -11,7 +11,7 @@ const ChefCard = ({chef}) => {
                      <div className="card  bg-base-100 shadow-xl">
   <figure><img className='h-72 w-full' src= {photo} alt="Shoes" /></figure>
   <div className="card-body">
-    <h2 className="card-title">{name}</h2>
+    <h2 className="card-title"> Name : {name}</h2>
     <p> Number of recipe :{number_of_recipes}</p>
     
      
@@ -22,7 +22,7 @@ const ChefCard = ({chef}) => {
     <div className="card-actions justify-end">
         <Link to = {`/recipes/${id}`}>
         
-      <button className="btn btn-primary">Buy Now</button>
+      <button className="btn btn-primary">Show details</button>
         </Link>
     </div>
   </div>

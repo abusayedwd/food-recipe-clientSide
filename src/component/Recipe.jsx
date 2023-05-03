@@ -22,19 +22,21 @@ const Recipe = () => {
        
         return (
                 <div>
-                      <div>
-                        <div className='mt-5 w-80 mx-auto'>
-    <img  className=" h-72 w-full rounded-lg" src= {photo} />
-                        <div><h1 className='text-2xl'> Name : {name}</h1></div>
-                        <p> Some Bio : {bio}</p>
-                        <p> Like : {likes}</p>
-                        <p> Recipe quantity : {number_of_recipes}</p>
-                        <p> Experience : {experience}</p>
-                         
-  </div>
+                <div className='flex w-3/4 mx-auto gap-8 mt-12'>
+                        <div className='w-4/5'>
+                 <img  className=" h-72 w-full rounded-lg" src= {photo} />
+                       </div>
+                 <div>
+              <h1 className='text-2xl font-bold'> Name : {name}</h1> 
+                        <p> <span className='  font-bold'>Some bio</span> : {bio}</p>
+                        <p> <span className='font-bold'>like</span> : {likes}</p>
+                        <p> <span className='font-bold'>Recipe quantity</span> : {number_of_recipes}</p>
+                        <p> <span className='font-bold'>Experience</span> : {experience}</p>
+                 </div>
 
-                </div>
-                <div>
+        </div>
+                <h1 className='text-2xl font-bold my-8 text-center'>Three Recipe of Chef:</h1>  
+                <div className=" grid grid-cols-1 md:grid-cols-3 w-3/4 mx-auto gap-6 mt-8">
                 {
                         recipe.map(r => <Recipecard
                         key={r.id}
@@ -42,8 +44,8 @@ const Recipe = () => {
                         
                         ></Recipecard>)
                 }    
-                 <Link to = "/">back</Link>     
                  </div> 
+                 <Link to = "/">back</Link>     
                 </div>
         );
 };

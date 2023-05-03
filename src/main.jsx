@@ -6,6 +6,13 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Main from './component/Layout/Main.jsx'
 import Home from './component/pages/Home.jsx'
 import Recipe from './component/Recipe.jsx'
+import Login from './component/Login/Login.jsx'
+import Register from './component/Register/Register.jsx'
+import Blog from './component/pages/Blog.jsx'
+import AuthProvider from './component/Authprovider/AuthProvider.jsx'
+ 
+ 
+ 
 
 const router = createBrowserRouter([
    {
@@ -21,6 +28,18 @@ const router = createBrowserRouter([
         path:'/recipes/:id',
         element:<Recipe></Recipe>,
         loader: ({params}) => fetch(`http://localhost:5000/chef/${params.id}`)
+      },
+      {
+        path:'login',
+        element: <Login></Login>
+      },
+      {
+        path:'register',
+        element:<Register></Register>
+      },
+      {
+        path:'blog',
+        element:<Blog></Blog>
       }
     ]
    }
@@ -29,6 +48,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
-  </React.StrictMode>,
+     
+
+     <AuthProvider>
+     <RouterProvider router={router}></RouterProvider>
+     </AuthProvider>
+     
+   </React.StrictMode>,
 )
