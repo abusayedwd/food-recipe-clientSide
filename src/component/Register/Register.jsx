@@ -29,10 +29,11 @@ const Register = () => {
                 setSuccess('signUp successfull!!!')
                 setError('')
                 form.reset(" ")
-                // console.log(createdUser)
+                console.log(createdUser)
               })
               .catch(error => {
-                console.log(error)
+                const errore = (error,'alredy use have account')
+                setError(errore)
               })
         }
 
@@ -58,6 +59,7 @@ const Register = () => {
                 </div>
 
                 <p className='font-bold text-lime-700'>{success}</p>
+                 
                  <p  className='text-red-800 font-bold'>{error}</p>
 
 

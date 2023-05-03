@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../Authprovider/AuthProvider';
 
 const Header = () => {
-        const {user} = useContext(AuthContext)
+        const {user} = useContext(AuthContext);
+
+      
+        
         return (
                 <div className="navbar bg-gray-300 container mx-auto">
   <div className="navbar-start">
@@ -25,6 +28,12 @@ const Header = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
+
+                 {
+               user &&  
+               <span className='text-white'>welcom, {user.photo}</span>
+               } 
+
       <li>
         <Link to ="/">Home</Link>
         </li>
