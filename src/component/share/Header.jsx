@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../Authprovider/AuthProvider';
 
 const Header = () => {
-        const {user} = useContext(AuthContext);
+        const {user,logOut} = useContext(AuthContext);
 
-      
+        const logOuthandle = () => {
+                logOut()
+                .then(result => {})
+                .catch(error => console.log(error))
+             }
         
         return (
                 <div className="navbar bg-gray-300 container mx-auto">
@@ -29,9 +33,9 @@ const Header = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
 
-                 {
+    {
                user &&  
-               <span className='text-white'>welcom, {user.photo}</span>
+               <span className='text-white'>welcom, {user.name} <button  className='bg-red-600 px-4 py-2 rounded-lg' onClick={logOuthandle}>Log Out</button></span>
                } 
 
       <li>

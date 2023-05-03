@@ -18,7 +18,9 @@ const AuthProvider = ({children}) => {
         setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
      }
-      
+     const logOut = () => {
+        return signOut(auth)
+}
 
       // observer user auth state
       useEffect( () => {
@@ -38,6 +40,7 @@ const AuthProvider = ({children}) => {
                 loading,
                 createUser,
                 signIn,
+                logOut
                  
         }
         return (

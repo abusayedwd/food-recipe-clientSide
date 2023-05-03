@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Authprovider/AuthProvider';
  
 
@@ -7,6 +7,10 @@ const Login = () => {
         const {signIn} = useContext(AuthContext)
         const [error, setError] = useState('')
         const [success, setSuccess] = useState('');
+        const location = useLocation();
+        const navigate = useNavigate()
+
+        const from = location.state?.from?.pathname || '/';
 
        const loginHandler = event => {
         event.preventDefault();
@@ -22,6 +26,8 @@ const Login = () => {
                 const logedUser = result.user;
                 setSuccess("Login is successfuly! Wow")
                 // console.log(logedUser)
+                navigate(from , {replace: true})
+
         })
         .catch(error => {
                 const errorr = (error,'Email or password dose not match');
