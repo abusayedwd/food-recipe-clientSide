@@ -22,7 +22,7 @@ const ChefCard = ({chef}) => {
     <div className="card-actions justify-end">
         <Link to = {`/recipes/${id}`}>
         
-      <button className="btn btn-primary">Show details</button>
+      <button className="btn btn-primary">Recipe details</button>
         </Link>
     </div>
   </div>

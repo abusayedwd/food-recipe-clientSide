@@ -1,10 +1,11 @@
 import React from 'react';
+// import benner from '../../public/images/'
  
 
 const Benner = () => {
         return (
                
-                      <div  className="hero h-96 mt-8 container mx-auto" style={{ backgroundImage: `url("/public/images/burger1.jpg")` }}>
+                      <div  className="hero h-96 mt-8 container mx-auto" style={{ backgroundImage: `url("/public/images/burger2.webp")` }}>
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-start text-neutral-content">
     <div className="max-w-md">
