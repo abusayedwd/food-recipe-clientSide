@@ -12,7 +12,7 @@ const Header = () => {
              }
         
         return (
-                <div className="navbar bg-gray-300 container mx-auto">
+                <div className="navbar  container mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -28,19 +28,19 @@ const Header = () => {
       </li>
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+     <p className='font-bold text-amber-600 text-2xl'>BD-RECIPE-HUB</p>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
 
     
 
-      <li>
+      <li className='font-bold text-xl'>
         <Link to ="/">Home</Link>
         </li>
        
       
-      <li> 
+      <li className='font-bold text-xl'> 
         <Link to = '/blog'>Blog</Link>
       </li>
      
@@ -53,7 +53,7 @@ const Header = () => {
                  <img className='w-8 rounded-full' title={user.name} src={user.photoURL} alt="" /> <button  className='bg-red-300 mr-4 px-4 py-2 rounded-lg' onClick={logOuthandle}>Log Out</button> </div> :
                <div>
                <button className="btn btn-active btn-success mr-3"> 
-    <Link to = "/login">Login</Link>
+               <Link to = "/login">Login</Link>
   </button>
                 </div> 
                
