@@ -29,7 +29,7 @@ const Recipecard = ({recipe}) => {
                           </div>
                           <div>
                           <p> <span className='font-bold'>Cooking Method :</span> : {cooking_method}</p>
-                          <button  className='px-4 py-2 bg-orange-300 rounded-lg font-bold'>Add Favourite</button>
+                          <button  className='px-4 py-2 bg-gray-400 rounded-lg font-bold'>Add Favourite</button>
                           </div>
 
                       

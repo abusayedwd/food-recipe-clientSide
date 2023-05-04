@@ -26,7 +26,7 @@ const Toprecipe = () => {
                         <h1 className='text-3xl text-lime-700 mt-20 font-serif font-bold text-center'>Top Recipe Our</h1>
 
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto'>
-             <div className="card w-96 bg-base-100 shadow-xl">
+             <div className="card bg-base-100 shadow-xl">
   <figure className="px-10 pt-10">
     <img   src={recipe1}alt="Shoes" className="h-80 rounded-xl" />
   </figure>
@@ -39,7 +39,7 @@ const Toprecipe = () => {
   <button className='px-6 py-2 w-2/4 mx-auto bg-orange-300 font-bold rounded-lg'>See More</button>
 </div>
 
-<div className="card w-96 bg-base-100 shadow-xl">
+<div className="card  bg-base-100 shadow-xl">
   <figure className="px-10 pt-10">
     <img  src= {recipe2} alt="Shoes" className="h-80 rounded-xl" />
   </figure>
@@ -51,7 +51,7 @@ const Toprecipe = () => {
   <button className='px-6 py-2 w-2/4 mx-auto bg-orange-300 font-bold rounded-lg'>See More</button>
 </div>
 
-<div className="card w-96 bg-base-100 shadow-xl">
+<div className="card bg-base-100 shadow-xl">
   <figure className="px-10 pt-10">
     <img  src= {recipe3} alt="Shoes" className="h-80 rounded-xl" />
   </figure>

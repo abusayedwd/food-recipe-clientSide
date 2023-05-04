@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Authprovider/AuthProvider';
+import {  FaGithub, FaGoogle, FaRegThumbsUp } from 'react-icons/fa';
 import {  GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from '../../firebase/firebase.config';
  
@@ -24,14 +25,14 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password)
+        // console.log(email, password)
 
         setError('');
         signIn(email,password)
         .then(result => {
                 const logedUser = result.user;
                 setSuccess("Login is successfuly! Wow")
-                // console.log(logedUser)
+                console.log(logedUser)
                 navigate(from , {replace: true})
 
         })
@@ -87,8 +88,8 @@ const Login = () => {
       </form>
       <p className='text-center'>or ?</p>
         <div className='w-1/4 mx-auto  p-4'>
-        <button onClick={Logingoolge} className="btn btn-outline btn-info ml-12">Login with google</button> <br />
-       <button onClick={loginGithub} className="btn btn-outline btn-accent ml-12 mt-3">Login with Github</button>
+        <button onClick={Logingoolge} className="btn btn-outline btn-info ml-12"> <FaGoogle></FaGoogle>  Login with google</button> <br />
+       <button onClick={loginGithub} className="btn btn-outline btn-accent ml-12 mt-3"><FaGithub></FaGithub> Login with Github</button>
         </div>
                 </div>
         );

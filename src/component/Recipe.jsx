@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, json, useLoaderData } from 'react-router-dom';
 import Recipecard from './Recipecard';
-import card from '../../public/images/images2.jpg'
+ 
 import card22 from '../../public/images/card22.png'
+import { FaArrowCircleLeft, FaArrowLeft } from 'react-icons/fa';
  
 
 const Recipe = () => {
@@ -68,7 +69,10 @@ const Recipe = () => {
                         ></Recipecard>)
                 }    
                  </div> 
-                 <Link to = "/">back</Link>     
+                 <button >
+                
+                 <Link className='flex items-center px-4 py-1 gap-2 bg-orange-300 rounded-lg' to = "/"><FaArrowLeft></FaArrowLeft> back</Link>     
+                 </button>
                 </div>
         );
 };
