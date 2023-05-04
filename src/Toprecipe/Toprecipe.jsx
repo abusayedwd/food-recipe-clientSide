@@ -9,7 +9,7 @@ const Toprecipe = () => {
         return (
                 <div>
 
-                <div className='grid grid-cols-1 md:grid-cols-2  mt-24'>
+                <div className='grid grid-cols-1 gap-5 md:grid-cols-2  mt-24'>
                         <div>
                                 <img className='h-96 rounded-3xl' src={sidep} alt="" />
                         </div>
@@ -36,7 +36,7 @@ const Toprecipe = () => {
     <p>bangladeshi brand</p>
     
   </div>
-  <button className='px-6 py-2 bg-orange-300 font-bold rounded-lg'>See More</button>
+  <button className='px-6 py-2 w-2/4 mx-auto bg-orange-300 font-bold rounded-lg'>See More</button>
 </div>
 
 <div className="card w-96 bg-base-100 shadow-xl">
@@ -48,7 +48,7 @@ const Toprecipe = () => {
     <p>Its Awsome Recipe and very testy !!</p>
     <p>bangladeshi brand</p>
   </div>
-  <button className='px-6 py-2 bg-orange-300 font-bold rounded-lg'>See More</button>
+  <button className='px-6 py-2 w-2/4 mx-auto bg-orange-300 font-bold rounded-lg'>See More</button>
 </div>
 
 <div className="card w-96 bg-base-100 shadow-xl">
@@ -60,7 +60,7 @@ const Toprecipe = () => {
     <p>Its Awsome Recipe and very testy !!</p>
     <p>bangladeshi brand</p>
   </div>
-  <button className='px-6 py-2 bg-orange-300 font-bold rounded-lg'>See More</button>
+  <button className='px-6 py-2 w-2/4 mx-auto bg-orange-300 font-bold rounded-lg'>See More</button>
 </div>
 
 </div>
