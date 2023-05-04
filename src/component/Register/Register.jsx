@@ -1,13 +1,13 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Authprovider/AuthProvider';
 
 const Register = () => {
-        const {createUser} = useContext(AuthContext);
+        const {createUser, userUpdate,logOut} = useContext(AuthContext);
         const [error, setError] = useState('')
         const [success, setSuccess] = useState('');
 
-
+   const navigate = useNavigate()
         const handleRegiste = event =>{
                 event.preventDefault();
                 const form = event.target;
@@ -30,6 +30,14 @@ const Register = () => {
                 setError('')
                 form.reset(" ")
                 console.log(createdUser)
+                userUpdate(result.user, name, photo)
+                logOut()
+                .then(() => navigate('/login'))
+                .catch(error =>{
+                  console.log(error)
+                })
+
+
               })
               .catch(error => {
                 const errore = (error,'alredy use have account')
