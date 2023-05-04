@@ -33,10 +33,7 @@ const Header = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
 
-    {
-               user &&  
-               <span className='text-white'>welcom, {user.name} <button  className='bg-red-600 px-4 py-2 rounded-lg' onClick={logOuthandle}>Log Out</button></span>
-               } 
+    
 
       <li>
         <Link to ="/">Home</Link>
@@ -50,9 +47,17 @@ const Header = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <button className="btn btn-active btn-success mr-3"> 
+ 
+  {
+               user ? <div>
+                 <img className='w-60 rounded-full' title={user.name} src={user.photoURL} alt="" /> <button  className='bg-red-300 px-4 py-2 rounded-lg' onClick={logOuthandle}>Log Out</button> </div> :
+               <div>
+               <button className="btn btn-active btn-success mr-3"> 
     <Link to = "/login">Login</Link>
   </button>
+                </div> 
+               
+               } 
   <button className="btn btn-active btn-secondary"> 
     <Link to = "/register">SingUp</Link>
   </button>
