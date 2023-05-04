@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, json, useLoaderData } from 'react-router-dom';
 import Recipecard from './Recipecard';
+import card from '../../public/images/images2.jpg'
+import card22 from '../../public/images/card22.png'
  
 
 const Recipe = () => {
@@ -29,7 +31,7 @@ const Recipe = () => {
 <div className="card card-side bg-base-100 shadow-xl mt-8">
   <figure><img className='w-full' src= {photo} alt="Movie"/></figure>
   <div className="card-body w-full">
-  <div  className="hero h-80 w-full" style={{ backgroundImage: `url("/public/images/images2.jpg")` }}>
+  <div  className="hero h-80 w-full" style={{ backgroundImage: `url(${card22})` }}>
    <div className="hero-overlay bg-opacity-60"></div>
    <div className="hero-content text-start text-neutral-content">
      <div className="max-w-md">

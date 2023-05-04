@@ -1,13 +1,14 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Authprovider/AuthProvider';
-import {  GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import {  GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from '../../firebase/firebase.config';
  
 
 const Login = () => {
         const auth = getAuth(app)
-        const provider = new GoogleAuthProvider();
+        const googleProvider = new GoogleAuthProvider();
+        const githubProvider = new GithubAuthProvider();
 
         const {signIn} = useContext(AuthContext)
         const [error, setError] = useState('')
@@ -42,13 +43,23 @@ const Login = () => {
         })
        }
        const Logingoolge = () => {
-        signInWithPopup(auth, provider)
+        signInWithPopup(auth, googleProvider)
         .then(result=> {
                 const googleUser = result.user;
                 console.log(googleUser)
         })
         .catch(error => {
                 console.log('errore',error.message)
+        })
+       }
+       const loginGithub = () => {
+        signInWithPopup(auth, githubProvider)
+        .then(result=> {
+                const gitUser = result.user;
+                console.log(gitUser)
+        })
+        .catch(error => {
+                console.log(error.message)
         })
        }
          
@@ -77,7 +88,7 @@ const Login = () => {
       <p className='text-center'>or ?</p>
         <div className='w-1/4 mx-auto  p-4'>
         <button onClick={Logingoolge} className="btn btn-outline btn-info ml-12">Login with google</button> <br />
-       <button className="btn btn-outline btn-accent ml-12 mt-3">Login with Github</button>
+       <button onClick={loginGithub} className="btn btn-outline btn-accent ml-12 mt-3">Login with Github</button>
         </div>
                 </div>
         );

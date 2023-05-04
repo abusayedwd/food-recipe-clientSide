@@ -50,7 +50,7 @@ const Header = () => {
  
   {
                user ? <div>
-                 <img className='w-60 rounded-full' title={user.name} src={user.photoURL} alt="" /> <button  className='bg-red-300 px-4 py-2 rounded-lg' onClick={logOuthandle}>Log Out</button> </div> :
+                 <img className='w-8 rounded-full' title={user.name} src={user.photoURL} alt="" /> <button  className='bg-red-300 mr-4 px-4 py-2 rounded-lg' onClick={logOuthandle}>Log Out</button> </div> :
                <div>
                <button className="btn btn-active btn-success mr-3"> 
     <Link to = "/login">Login</Link>
