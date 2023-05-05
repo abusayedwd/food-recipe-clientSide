@@ -28,7 +28,7 @@ const Recipe = () => {
                 <div>
                 <div>
                 
-                 <div className='md:flex h-80  '>
+                 <div className='md:flex h-80 mt-20 '>
                   <div className='md:w-[40%] w-full  '>
                   <figure><img className='md:w-full w-full rounded-lg h-80' src= {photo} alt="Movie"/></figure>
                   </div>
@@ -51,7 +51,7 @@ const Recipe = () => {
              </div>
           </div>
      
-                <h1 className='text-2xl font-bold mt-80 md:my-8 text-center'>Three Recipe of {name}:</h1>  
+                <h1 className='text-2xl font-bold mt-96 md:my-8 text-center'>Three Recipe of {name}:</h1>  
                 <div className=" grid grid-cols-1 md:grid-cols-3 w-3/4 mx-auto gap-6 mt-8">
                 {
                         recipe.map(r => <Recipecard

@@ -67,7 +67,7 @@ const Login = () => {
         return (
                 <div>
              
-      <form onSubmit={loginHandler} className='w-2/5 mx-auto mt-8 bg-sky-200 p-8'>
+      <form onSubmit={loginHandler} className='md:w-2/5 w-[80%] rounded-2xl shadow-2xl mx-auto mt-8 bg-sky-100 p-8'>
         <h3 className='font-bold font-serif text-2xl text-center'>Login!!!</h3>
         <div className="mb-6 ">
           <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
@@ -87,9 +87,9 @@ const Login = () => {
 
       </form>
       <p className='text-center'>or ?</p>
-        <div className='w-1/4 mx-auto  p-4'>
-        <button onClick={Logingoolge} className="btn btn-outline btn-info ml-12"> <FaGoogle></FaGoogle>  Login with google</button> <br />
-       <button onClick={loginGithub} className="btn btn-outline btn-accent ml-12 mt-3"><FaGithub></FaGithub> Login with Github</button>
+        <div className='w-2/4 mx-auto  p-4'>
+        <button onClick={Logingoolge} className="btn btn-outline btn-info md:ml-12"> <FaGoogle></FaGoogle>  Login with google</button> <br />
+       <button onClick={loginGithub} className="btn btn-outline btn-accent md:ml-12 mt-3"><FaGithub></FaGithub> Login with Github</button>
         </div>
                 </div>
         );

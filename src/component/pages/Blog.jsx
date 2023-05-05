@@ -1,9 +1,12 @@
 import React from 'react';
-import Notfound from '../Notfound';
+import Pdf from 'react-to-pdf';
+ 
 
+const ref = React.createRef();
 const Blog = () => {
         return (
-                <div>
+            <div>
+                       <div ref={ref}>
                      <h1 className='m-12 text-3xl font-bold text-center'>Question & Answer:</h1>
                <div className='w-3/4 mx-auto mt-5'>
                      <p className='text-xl font-bold'><span className='text-2xl font-bold m-3'>Question-1.</span>What is the Difference Between a Controlled and Uncontrolled Component in React? </p>
@@ -23,8 +26,17 @@ const Blog = () => {
                      <p className='text-xl font-bold'><span className='text-2xl font-bold m-3'>Question-4.</span>what is custom hook and why will you create a custom hook?</p>
                      <p className='font-semibold text-orange-400'><span className='text-2xl font-bold m-3'>Answer :</span>Custom Hooks are a mechanism to reuse stateful logic (such as setting up a subscription and remembering the current value), but every time you use a custom Hook, all state and effects inside of it are fully isolated.</p>
                  </div>
+
+              </div>
                  
-        </div>
+                 <div>
+                 <Pdf targetRef={ref} filename="Blogs question answer.pdf">
+                 {({ toPdf }) => <button className='btn-success px-5 py-2 rounded-lg font-bold' onClick={toPdf}>Download pdf</button>}
+              </Pdf>
+                 </div>
+                 
+       </div>
+    
         );
 };
 

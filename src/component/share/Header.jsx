@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Authprovider/AuthProvider';
+import ActivLink from '../Activelink/Activelink';
 
 const Header = () => {
         const {user,logOut} = useContext(AuthContext);
@@ -20,11 +21,11 @@ const Header = () => {
       </label>
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
       <li>
-        <Link to ="/">Home</Link>
+        <ActivLink to ="/">Home</ActivLink>
         </li>
          
         <li> 
-        <Link to = '/blog'>Blog</Link>
+        <ActivLink to = '/blog'>Blog</ActivLink>
       </li>
       </ul>
     </div>
@@ -35,13 +36,13 @@ const Header = () => {
 
     
 
-      <li className='font-bold text-xl'>
-        <Link to ="/">Home</Link>
+      <li className='font-bold text-xl mr-5'>
+        < ActivLink to ="/">Home</ ActivLink>
         </li>
        
       
       <li className='font-bold text-xl'> 
-        <Link to = '/blog'>Blog</Link>
+        < ActivLink to = '/blog'>Blog</ ActivLink>
       </li>
      
     </ul>

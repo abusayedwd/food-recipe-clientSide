@@ -6,9 +6,9 @@ const Notfound = () => {
         return (
                 <div>
                         <div>
-                                <img src= {error} alt="" />
-                                <button className='px-5 py-1 bg-sky-400 rounded-lg'>
-                                 <Link to ="/">go to home </Link>
+                                <img className='w-[70%] h-96 mx-auto mt-24' src= {error} alt="" />
+                                <button className='px-5 py-1 w-40 ml-12 bg-sky-400 rounded-lg'>
+                                 <Link className='font-bold' to ="/">Go to home </Link>
                                 </button>
                         </div>
                 </div>
