@@ -12,7 +12,7 @@ const Recipe = () => {
          const [recipe, setRecipe] = useState([]);
          
        useEffect( () => {
-        fetch('http://localhost:5000/recipes')
+        fetch('https://food-recipe-a-server-abusayedwd.vercel.app/recipes')
         .then(res => res.json())
         .then(data => {
     const selectRecipe = data.filter(data=> data.chef_name == name)
@@ -26,13 +26,14 @@ const Recipe = () => {
        
         return (
                 <div>
+                <div>
                 
-                 <div>
-
-<div className="card card-side bg-base-100 shadow-xl mt-8">
-  <figure><img className='w-full' src= {photo} alt="Movie"/></figure>
-  <div className="card-body w-full">
-  <div  className="hero h-80 w-full" style={{ backgroundImage: `url(${card22})` }}>
+                 <div className='md:flex h-80  '>
+                  <div className='md:w-[40%] w-full  '>
+                  <figure><img className='md:w-full w-full rounded-lg h-80' src= {photo} alt="Movie"/></figure>
+                  </div>
+                  <div className='md:w-[60%] w-full text-center'>
+                  <div  className="hero md:h-80 w-full" style={{ backgroundImage: `url(${card22})` , borderRadius: '22px' }}>
    <div className="hero-overlay bg-opacity-60"></div>
    <div className="hero-content text-start text-neutral-content">
      <div className="max-w-md">
@@ -43,23 +44,14 @@ const Recipe = () => {
                          <p className='border rounded-xl border-y-slate-50 p-3 mx-4'> <span className='font-bold'>Recipe quantity</span> : {number_of_recipes}</p>
                          <p className='border rounded-xl border-y-slate-50 p-3 mx-4'> <span className='font-bold'>Experience</span> : {experience}</p>
                          </div>
-    
-     </div>
-   </div>
- </div>
-  </div>
-</div>
-
-
-
- 
-
-
-               
-                 </div>
-
-        
-                <h1 className='text-2xl font-bold my-8 text-center'>Three Recipe of {name}:</h1>  
+                      </div>
+                    </div>
+                  </div>
+              </div>
+             </div>
+          </div>
+     
+                <h1 className='text-2xl font-bold mt-80 md:my-8 text-center'>Three Recipe of {name}:</h1>  
                 <div className=" grid grid-cols-1 md:grid-cols-3 w-3/4 mx-auto gap-6 mt-8">
                 {
                         recipe.map(r => <Recipecard

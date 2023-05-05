@@ -11,6 +11,7 @@ import Register from './component/Register/Register.jsx'
 import Blog from './component/pages/Blog.jsx'
 import AuthProvider from './component/Authprovider/AuthProvider.jsx'
 import PrivateRoute from './component/Privaterout/PrivatRoute.jsx'
+import Notfound from './component/Notfound.jsx'
  
  
  
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
    {
     path: '/',
     element:<Main></Main>,
+    errorElement:<Notfound></Notfound>,
     children: [
       {
         path:'/',

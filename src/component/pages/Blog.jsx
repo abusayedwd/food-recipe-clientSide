@@ -1,4 +1,5 @@
 import React from 'react';
+import Notfound from '../Notfound';
 
 const Blog = () => {
         return (
@@ -22,6 +23,7 @@ const Blog = () => {
                      <p className='text-xl font-bold'><span className='text-2xl font-bold m-3'>Question-4.</span>what is custom hook and why will you create a custom hook?</p>
                      <p className='font-semibold text-orange-400'><span className='text-2xl font-bold m-3'>Answer :</span>Custom Hooks are a mechanism to reuse stateful logic (such as setting up a subscription and remembering the current value), but every time you use a custom Hook, all state and effects inside of it are fully isolated.</p>
                  </div>
+                 
         </div>
         );
 };

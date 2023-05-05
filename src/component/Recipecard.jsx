@@ -5,6 +5,7 @@ const Recipecard = ({recipe}) => {
         
         console.log(recipe)
         const {  id, rename , image, rating , ingredients,cooking_method}  = recipe;
+        console.log(recipe)
         return (
                 <div >
                       

@@ -10,11 +10,11 @@ const Toprecipe = () => {
                 <div>
 
                 <div className='grid grid-cols-1 gap-5 md:grid-cols-2  mt-24'>
-                        <div>
+                        <div className='p-4'>
                                 <img className='h-96 rounded-3xl' src={sidep} alt="" />
                         </div>
-                        <div className=' text-start'> 
-                            <p className='mt-24 text-2xl text-emerald-600 font-bold'>take a faste , <br /> come join us , <br /> life is to indlessly delecious </p> 
+                        <div className=' text-start md:ml-2 ml-16'> 
+                            <p className='mt-20 text-2xl text-emerald-600 font-bold'>take a faste , <br /> come join us , <br /> life is to indlessly delecious </p> 
                             <p className='my-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem molestias sunt modi eos perferendis necessitatibus iusto maxime provident?</p>   
                             <button className="btn btn-accent">Now it</button>
                      </div>
